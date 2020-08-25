@@ -226,8 +226,6 @@ def getEosSetup():
         'EOS_UTF8': '1',
         'EOS_SET_MASTER': 1,
       },
-      'volumes': [
-      ]
     },
     {
       'name': 'ocis-server',
@@ -312,16 +310,6 @@ def getEosSetup():
         'EOS_UTF8': '1',
         'EOS_SET_MASTER': 1,
       },
-      'volumes': [
-        {
-          'name': 'eosconfig',
-          'path': '/var/eos/config'
-        },
-        {
-          'name': 'eos-ns-queue',
-          'path': '/var/eos/ns-queue'
-        }
-      ]
     },
     {
       'name': 'eos-fst',
@@ -346,12 +334,6 @@ def getEosSetup():
         'EOS_MGM_URL': "root://mgm-master",
         'LUKSPASSPHRASE': "just-some-rubbish-to-make-sure-fst-entrypoint-does-not-crash",
       },
-      'volumes': [
-        {
-          'name': 'eosdisks',
-          'path': '/disks'
-        },
-      ]
     },
     {
       'name': 'quark-1',
@@ -463,24 +445,6 @@ def eosTests(ctx, coreBranch = 'master', coreCommit = ''):
           'sleep 200',
           'make test-acceptance-api',
         ],
-        'volumes': [
-          {
-            'name': 'gopath',
-            'path': '/srv/app',
-          },
-          {
-            'name': 'eosdisks',
-            'path': '/e/disks',
-          },
-          {
-            'name': 'eosconfig',
-            'path': '/e/master/var/eos/config'
-          },
-          {
-            'name': 'eos-ns-queue',
-            'path': '/e/master/var/eos/ns-queue'
-          }
-        ]
       },
     ],
     'services':
@@ -490,18 +454,6 @@ def eosTests(ctx, coreBranch = 'master', coreCommit = ''):
         'name': 'gopath',
         'temp': {},
       },
-      {
-        'name': 'eosdisks',
-        'temp': {},
-      },
-      {
-        'name': 'eosconfig',
-        'temp': {},
-      },
-      {
-        'name': 'eos-ns-queue',
-        'temp': {},
-      }
     ],
     'trigger': {
       'ref': [
