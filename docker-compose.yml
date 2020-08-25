@@ -9,9 +9,6 @@ services:
   ocis:
     container_name: ocis
     image: owncloud/eos-ocis-dev:latest
-    tty: true
-    privileged: true
-    stdin_open: true
     ports:
       - 9200:9200
     env_file:
@@ -49,71 +46,45 @@ services:
   mgm-master:
     container_name: mgm-master
     image: owncloud/eos-mgm:4.6.5
-    tty: true
     privileged: true
-    stdin_open: true
     env_file:
     - ./config/eos-docker.env
     hostname: mgm-master.testnet
     networks:
     - testnet
-    volumes:
-    - eos-mgm-master-log:/var/log/eos
-    - eos-mgm-master-config:/var/eos/config
-    - eos-mgm-master-ns-queue:/var/eos/ns-queue
-    # this volume kills mgm-master during startup
-    # - ./e/master/var/eos/md:/var/eos/md
     environment:
       EOS_SET_MASTER: 1
 
   mq-master:
     container_name: mq-master
     image: owncloud/eos-mq:4.6.5
-    tty: true
-    privileged: true
-    stdin_open: true
     env_file:
     - ./config/eos-docker.env
     hostname: mq-master.testnet
     networks:
     - testnet
-    volumes:
-    - eos-mq-master-log:/var/log/eos
-    - eos-mq-master-config:/var/eos/config
-    - eos-mq-master-ns-queue:/var/eos/ns-queue
     environment:
       EOS_SET_MASTER: 1
 
   fst:
     container_name: fst
     image: owncloud/eos-fst:4.6.5
-    tty: true
-    privileged: true
-    stdin_open: true
     env_file:
     - ./config/eos-docker.env
     hostname: fst.testnet
     networks:
     - testnet
-    volumes:
-    - eos-fst-log:/var/log/eos
-    - eos-fst-disks:/disks
     environment:
       EOS_MGM_URL: "root://mgm-master.testnet"
 
   quark-1:
     container_name: quark-1
     image: owncloud/eos-qdb:4.6.5
-    tty: true
-    privileged: true
-    stdin_open: true
     env_file:
     - ./config/eos-docker.env
     hostname: quark-1.testnet
     networks:
     - testnet
-    volumes:
-    - eos-quarkdb1:/var/lib/quarkdb
     environment:
       EOS_QDB_DIR: "/var/lib/quarkdb/eosns"
       EOS_QDB_PORT: "7777"
@@ -124,16 +95,11 @@ services:
   quark-2:
     container_name: quark-2
     image: owncloud/eos-qdb:4.6.5
-    tty: true
-    privileged: true
-    stdin_open: true
     env_file:
     - ./config/eos-docker.env
     hostname: quark-2.testnet
     networks:
     - testnet
-    volumes:
-    - eos-quarkdb2:/var/lib/quarkdb
     environment:
       EOS_QDB_DIR: "/var/lib/quarkdb/eosns"
       EOS_QDB_PORT: "7777"
@@ -144,16 +110,11 @@ services:
   quark-3:
     container_name: quark-3
     image: owncloud/eos-qdb:4.6.5
-    tty: true
-    privileged: true
-    stdin_open: true
     env_file:
     - ./config/eos-docker.env
     hostname: quark-3.testnet
     networks:
     - testnet
-    volumes:
-    - eos-quarkdb3:/var/lib/quarkdb
     environment:
       EOS_QDB_DIR: "/var/lib/quarkdb/eosns"
       EOS_QDB_PORT: "7777"
