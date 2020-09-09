@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package com.owncloud.ocis.thumbnails.v0;
+package ocis.thumbnails.alter;
 option go_package = "proto";
 
 // A Service for handling thumbnail generation

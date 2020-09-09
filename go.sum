@@ -1350,10 +1350,12 @@ github.com/owncloud/ocis-store v0.1.1 h1:lPvWjjPqbVqDW0sfgQdfY3dOOvXK0wC87eTL2fW
 github.com/owncloud/ocis-store v0.1.1/go.mod h1:Rav5iw0fZXYFqJl81IbyTVa/FidaBhgVPtp0XqkgviM=
 github.com/owncloud/ocis-thumbnails v0.2.0 h1:jHUXx5WZZxI6U3tGs53dpUfH/CwVBov1RhTi74GMltI=
 github.com/owncloud/ocis-thumbnails v0.2.0/go.mod h1:97QGLawjcpbhSIscbPXJAytE6vAQi5Y+Ov55h8/mq+0=
-github.com/owncloud/ocis-thumbnails v0.3.0 h1:As0wiSXwDp9JgK/FPY5h1J9HXEow9EFefgOdgEIgdP0=
-github.com/owncloud/ocis-thumbnails v0.3.0/go.mod h1:97QGLawjcpbhSIscbPXJAytE6vAQi5Y+Ov55h8/mq+0=
 github.com/owncloud/ocis-webdav v0.1.1 h1:4UN9GefQiH6RGgq2+tiYFLNw8ql6luXYH0NdCJg2n/U=
 github.com/owncloud/ocis-webdav v0.1.1/go.mod h1:E9OlGfvlxf1NHFOvFgbHWBe7/pw4Gqy/JaSJFEHQSzg=
+github.com/owncloud/ocis/thumbnails v0.2.0 h1:jHUXx5WZZxI6U3tGs53dpUfH/CwVBov1RhTi74GMltI=
+github.com/owncloud/ocis/thumbnails v0.2.0/go.mod h1:97QGLawjcpbhSIscbPXJAytE6vAQi5Y+Ov55h8/mq+0=
+github.com/owncloud/ocis/thumbnails v0.3.0 h1:As0wiSXwDp9JgK/FPY5h1J9HXEow9EFefgOdgEIgdP0=
+github.com/owncloud/ocis/thumbnails v0.3.0/go.mod h1:97QGLawjcpbhSIscbPXJAytE6vAQi5Y+Ov55h8/mq+0=
 github.com/oxtoacart/bpool v0.0.0-20190530202638-03653db5a59c h1:rp5dCmg/yLR3mgFuSOe4oEnDDmGLROTvMragMUXpTQw=
 github.com/oxtoacart/bpool v0.0.0-20190530202638-03653db5a59c/go.mod h1:X07ZCGwUbLaax7L0S3Tw4hpejzu63ZrrQiUe6W0hcy0=
 github.com/parnurzeal/gorequest v0.2.15/go.mod h1:3Kh2QUMJoqw3icWAecsyzkpY7UzRfDhbRdTjtNwNiUE=
